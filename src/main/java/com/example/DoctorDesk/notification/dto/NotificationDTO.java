@@ -22,18 +22,19 @@ import lombok.NoArgsConstructor;
 public class NotificationDTO {
 
     private Long id;
+
     private String subject;
 
     @NotBlank(message = "Recipient is required")
     private String recipient;
 
-    
     private String message;
+
     private NotificationType type;
 
     private LocalDateTime createdAt;
 
-    private String tamplateName;
-    private Map<String, Object> tamplateVariables;
+    private String templateName;
+    private Map<String , Object> templateVariables;
 
 }

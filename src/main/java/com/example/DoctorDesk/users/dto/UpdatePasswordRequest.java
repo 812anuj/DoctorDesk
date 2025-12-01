@@ -8,6 +8,6 @@ public class UpdatePasswordRequest {
     @NotBlank(message = "Old Password is required")
     private String oldPassword;
 
-    @NotBlank(message = "New Password is required") 
+    @NotBlank(message = "New Password is required")
     private String newPassword;
 }

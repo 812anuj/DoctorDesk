@@ -36,7 +36,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String FristName;
+    private String FirstName;
     private String LastName;
     private String dateOfBirth;
     private String phone;

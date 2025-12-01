@@ -26,20 +26,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "notification")
 public class Notification {
-    @Id
+  @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String subject;
     private String recipient;
 
     private String message;
-    
+
     @Enumerated(EnumType.STRING)
-    private NotificationType type;
+    private NotificationType type; // EMAIL, SMS, PUSH
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     private final LocalDateTime createdAt = LocalDateTime.now();

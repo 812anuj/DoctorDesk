@@ -9,6 +9,6 @@ import com.example.DoctorDesk.users.Entity.PasswordResetCode;
 public interface PasswordResetRepo extends JpaRepository<PasswordResetCode, Long> {
     Optional<PasswordResetCode> findByCode(String code);
 
-    void deleteByCode(Long userId);
+    void deleteByUserId(Long userId);
 
 }

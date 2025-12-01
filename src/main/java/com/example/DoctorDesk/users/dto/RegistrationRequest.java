@@ -15,23 +15,19 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RegistrationRequest {
 
-    @NotBlank(message="Name is Required")
+    @NotBlank(message = "Name is required")
     private String name;
 
-    private Specialization specialization;
+    private Specialization specialization; //if users is a doctor specify his specialization
 
-    private String LicenseNumber;
+    private String licenseNumber; ////if users is a doctor licence number of the doctor
 
-    @NotBlank(message="Email is Required")
+    @NotBlank(message = "Email is required")
     @Email
     private String email;
 
     private List<String> roles;
 
-    @NotBlank(message="Password is Required")
+    @NotBlank(message = "Password is required")
     private String password;
-
-
-
-
 }
