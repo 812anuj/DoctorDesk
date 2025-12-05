@@ -30,12 +30,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "doctors")
 public class Doctor {
+   
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String FristName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
 
     @Enumerated(EnumType.STRING)
     private Specialization specialization;
@@ -43,7 +45,7 @@ public class Doctor {
     private String licenseNumber;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", unique = true)
+    @JoinColumn(name = "user_id", unique = true, nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -36,13 +36,13 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
     private String dateOfBirth;
     private String phone;
     
     @Lob
-    private String KnownAllergies;
+    private String knownAllergies;
 
     @Enumerated(EnumType.STRING)
     private BloodGroup bloodGroup;

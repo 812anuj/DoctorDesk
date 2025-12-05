@@ -37,7 +37,7 @@ public class Appointment {
     
     private LocalDateTime startTime; 
     private LocalDateTime endTime;
-    private String meatingLink;
+    private String meetingLink;
 
     private String purposeOfConsultation;
     

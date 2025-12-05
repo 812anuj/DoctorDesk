@@ -1,5 +1,6 @@
 package com.example.DoctorDesk.doctor.dto;
 
+import com.example.DoctorDesk.enums.Specialization;
 import com.example.DoctorDesk.users.dto.UserDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -22,7 +23,7 @@ public class DoctorDTO {
     private String firstName;
     private String lastName;
 
-    private String specialization;
+    private Specialization specialization;
 
     private String licenseNumber;
 

@@ -25,11 +25,12 @@ import lombok.NoArgsConstructor;
 @Table(name = "consultation")
 public class Consultation {
 
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    private LocalDateTime consultaionDate;
+
+    private LocalDateTime consultationDate;
 
     @Lob
     private String subjectiveNotes;
@@ -44,7 +45,7 @@ public class Consultation {
     private String plan;
 
     @OneToOne
-    @JoinColumn(name = "appointment_id", unique = true ,nullable = false)
+    @JoinColumn(name = "appointment_id", unique = true, nullable = false)
     private Appointment appointment;
     
 }

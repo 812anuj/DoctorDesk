@@ -9,5 +9,6 @@ import com.example.DoctorDesk.consultation.entity.Consultation;
 
 public interface ConsultationRepo extends JpaRepository<Consultation, Long> {
     Optional<Consultation> findByAppointmentId(Long appointmentId); // Fetch consultation by appointmentId
-    List<Consultation> findAllByAppointmentPatientIdOrderByConsultaionDateDesc(Long patientId);
+   
+    List<Consultation> findByAppointmentPatientIdOrderByConsultationDateDesc(Long patientId);
 }
